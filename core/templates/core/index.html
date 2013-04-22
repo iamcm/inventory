@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%block main %}
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span10">
+            <a class="my10 btn btn-primary" href="/collection">Add new collection</a>
+            <a class="my10 btn btn-primary" href="/item">Add new item</a>
+
+            {% for o in object_list %}
+                <div>
+                    <a href='/collection/view/{{o.id}}' >{{ o.name }}</a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="span2 ">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{%block js%}
+{% endblock %}
